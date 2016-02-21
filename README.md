@@ -3,10 +3,9 @@
 
 - *You* can visit my [website][1]
 
-```javascript
-`var s = "JavaScript syntax highlighting";
+``javascript
+var s = "JavaScript syntax highlighting";
 alert(s);
-```
-`
+``
 
 [1]:	www.joshenglish.com "Josh English's current website"
