@@ -4,8 +4,8 @@
 - *You* can visit my [website][1]
 
 ``javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+var josh = “Testing Java Script“;
+console.log(josh);
 ``
 
 [1]:	www.joshenglish.com "Josh English's current website"
