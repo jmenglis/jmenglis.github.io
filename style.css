@@ -1,0 +1,146 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans','Helvetica Neue', Helvetica, arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: 'Open Sans','Helvetica Neue', Helvetica, arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 0px;
+}
+
+
+/*.container {
+  padding: 0 20px;
+}
+.row {
+  width: 1140px;
+  display: flex;
+  margin: auto;
+}
+
+.col-4 {
+  flex-basis: 33.3%;
+}
+
+.col-6 {
+  flex-basis: 2;
+}
+
+.col-8 {
+  flex-basis: 63.64%;
+}*/
+
+
+.container {
+  padding: 0 20px;
+}
+
+.row {
+  width: 1140px;
+  margin: auto;
+}
+
+
+
+/**
+  * Width: 1140
+  * Margin: 3%
+  */
+.col-1 {
+  float: left;
+  width: 5.33%;
+  margin-right: 3%;
+}
+.col-2 {
+  float: left;
+  width: 13.66%;
+  margin-right: 3%;
+}
+.col-3 {
+  float: left;
+  width: 21.99%;
+  margin-right: 3%;
+}
+.col-4 {
+  float: left;
+  width: 30.32%;
+  margin-right: 3%;
+}
+.col-5 {
+  float: left;
+  width: 38.65%;
+  margin-right: 3%;
+}
+
+.col-6{
+  float: left;
+  width: 46.98%;
+  margin-right: 3%;
+}
+
+.col-7 {
+  float: left;
+  width: 55.31%;
+  margin-right: 3%;
+}
+
+.col-8 {
+  float: left;
+  width: 63.64%;
+  margin-right: 3%;
+}
+.col-9 {
+  float: left;
+  width: 71.97%;
+  margin-right: 3%;
+}
+.col-10 {
+  float: left;
+  width: 80.30%;
+  margin-right: 3%;
+}
+.col-11 {
+  float: left;
+  width: 88.63%;
+  margin-right: 3%;
+}
+.col-12 {
+  float: left;
+  width: 100%;
+}
+
+.mobile {
+  display: none ;
+}
+@media only screen and (max-width: 940px) {
+    .responsive {
+      transform: rotate(11775deg);
+      transition: all 15s ease-in-out;
+    }
+}
+
+
+@media handheld, only screen and (max-device-width: 450px) {
+  .mobile{
+    display: block;
+    font-size: 4em;
+    color: red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
