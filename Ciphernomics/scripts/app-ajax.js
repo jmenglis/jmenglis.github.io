@@ -26,11 +26,18 @@ var  alphaArray = {
   'x':23,
   'y':24,
   'z':25
-}
-var userInput = 'submit';
-var userLevel = 0;
+};
 
-var testWord = 'submit'
+/* Coprimes for a future version of game to allow randomization of Affine
+Cipher
+
+var a = [1,3,5,7,9,11,15,17,19,21,23,25];
+var b = shifting the character by this much in cipher (b < 26);
+*/
+
+
+var userInput = '';
+var userLevel = 0;
 
 window.onload = function(evt) {
   console.log("Ready for some AJAX fun");
@@ -45,7 +52,7 @@ window.onload = function(evt) {
     return localWord = data.Word.toLowerCase();
       }
   });
-}
+};
 
 $(document).ajaxSuccess(function() {
   for (var userLevel = 0; userLevel < 5; userLevel++) {
@@ -61,6 +68,22 @@ $(document).ajaxSuccess(function() {
 
 
 
+// Affine Cipher (Hardest)
+// var a = coprimes < 26
+// var b = shifting
+// var x = current letter placement alphabet
+// var m = total number of letters in the alphabet = 26
+// E(x) = ax+b mod m
+
+var a = 5
+var b = 8
+var m = 26
+var x = 13 // match alphabet to number and get return.
+
+function affineCipher() {
+  var result = (a*x+b) % m;
+  console.log(result);
+}
 
 
 
