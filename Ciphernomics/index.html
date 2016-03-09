@@ -9,16 +9,33 @@
     <!-- add scripts -->
   </head>
   <body>
-  <h1>Ciphernomics</h1>
-  <h3>Game Instructions</h3>
-  <p>You will be provided a word to decode based on a key.  You will
-  a specific amount of time at which the bomb will explode.  Once
-  you solve the puzzle you will be able to move onto the next level.
-  </p>
-  <div class="time"></div>
-  <div class="word"></div>
-  <div id ="submissionBox"></div>
-  <button type="button">Start Timer</button>
+  <div class="container">
+    <div class="row">
+      <h1>Ciphernomics</h1>
+    </div>
+    <div class="row">
+      <h3>Game Instructions</h3>
+    </div>
+    <div class="row">
+      <p>
+        You will be provided a word to decode based on a key.  You will
+        a specific amount of time at which the bomb will explode.  Once
+        you solve the puzzle you will be able to move onto the next level.
+      </p>
+    </div>
+    <div class="row">
+      <div class="time"></div>
+    </div>
+    <div class="row">
+      <div class="word"></div>
+    </div>
+    <div class="row centerize">
+      <div id ="submissionBox"></div>
+    </div>
+    <div class="row centerize">
+      <button type="button" name='startButton'>START TIMER</button>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
   <script src="scripts/countdownClock.js"></script>
   <script src="scripts/app-ajax.js"></script>

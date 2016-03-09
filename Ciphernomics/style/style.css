@@ -1,9 +1,7 @@
 body {
   font-family: monaco, Consolas, 'Lucida Console', monospace;
   background: black;
-  color: yellow;
-}
-
+  color: yellow; }
 
 .container {
   position: relative;
@@ -11,20 +9,18 @@ body {
   max-width: 1232px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .container:after,
 .row:after,
 .u-cf {
   content: "";
   display: table;
-  clear: both;
-}
+  clear: both; }
 
-h1,h2,h3,h4,h5,h6 {
-  text-align: center;
-}
+h1, h2, h3, h4, h5, h6 {
+  text-align: center; }
+
 input {
   text-align: center;
   width: 400px;
@@ -33,25 +29,14 @@ input {
   font-size: 25px;
   margin-bottom: 10px;
   border: 5px solid yellow;
-  background:black;
-  color:red;
-}
+  background: black;
+  color: red; }
 
 .red {
-  color: red;
-}
+  color: red; }
 
 .centerize {
-  text-align: center;
-}
-
-@mixin button-bg($bg) {
-  background: $bg;
-  &:disabled {
-    background:lighten($bg,30%);
-    transition: all 1s ease;
-  }
-}
+  text-align: center; }
 
 button[name='startButton'] {
   color: white;
@@ -59,5 +44,9 @@ button[name='startButton'] {
   padding: 5px 10px;
   font-family: monaco, Consolas, 'Lucida Console', monospace;
   font-size: 16px;
-  @include button-bg(#e74c3c);
-}
+  background: #e74c3c; }
+  button[name='startButton']:disabled {
+    background: #f8c9c4;
+    transition: all 1s ease; }
+
+/*# sourceMappingURL=style.css.map */

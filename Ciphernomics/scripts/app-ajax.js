@@ -53,7 +53,7 @@ window.onload = function(evt) {
   function format(minutes, seconds) {
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
-    $('.time').text(minutes + ":" + seconds);
+    $('.time').html("<h2>" + minutes + ":" + seconds + "</h2>");
   }
 
   // convert localWord into finalword which displays for the user
@@ -94,6 +94,7 @@ window.onload = function(evt) {
             // json query to remove from body and keep the area clean
             $('.time').addClass('winner');
             $('.time').removeClass('time');
+            $('input[name="inputBox"]').prop('disabled', true);
             $('.winner').html('<H1>YOU WIN ROUND</H1>'/*+parseInt(userLevel+1)*/);
           }
       }
@@ -107,7 +108,9 @@ window.onload = function(evt) {
   $('button').click(function() {
     getRandomWord();
     timer.start();
-    $('#submissionBox').html('<input type="text" name="textInput">')
+    $('p').remove('p');
+    $('h3').remove('h3');
+    $('#submissionBox').html('<input type="text" name="inputBox">')
     $(this).prop('disabled', true);
     enterKey();
   });
@@ -115,10 +118,10 @@ window.onload = function(evt) {
   // gameOver function kills the game
   function gameOver() {
     if (timer.expired()) {
+      $('input[name="inputBox"]').prop('disabled', true);
       $('.time').addClass('loser');
       $('.time').removeClass('time');
-      $('input[name="textInput"]').prop('disabled', true);
-      $('.loser').html('<H1>YOU LOST!</H1>'/*+parseInt(userLevel+1)*/);
+      $('.loser').html('<H1 class="red">YOU LOST!</H1>'/*+parseInt(userLevel+1)*/);
     }
   }
 };
