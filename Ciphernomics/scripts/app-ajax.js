@@ -80,7 +80,7 @@ window.onload = function(evt) {
       finalArray.push(Object.keys(alphaArray)[x]);
     });
     finalString = finalArray.join('');
-    $('.word').html('<h2><strong>Dicipher this word: </strong>' + finalString)
+    $('.word').html('<h2>Dicipher this word: <span class="red">' + finalString + '</span></h2>')
   });
 
   function enterKey() {
@@ -108,7 +108,7 @@ window.onload = function(evt) {
     getRandomWord();
     timer.start();
     $('p').remove('p');
-    $('h3').remove('h3');
+    $('.instructions').remove('instructions');
     $('#submissionBox').html('<input type="text" name="inputBox">')
     $(this).prop('disabled', true);
     enterKey();
@@ -122,6 +122,7 @@ window.onload = function(evt) {
       $('.time').addClass('loser');
       $('.time').removeClass('time');
       $('.loser').html('<H1 class="red">YOU LOST!</H1>'/*+parseInt(userLevel+1)*/);
+      $('.loseWord').html('<h2>The word was: <span class="red">' + localWord + '</span></h2>');
     }
   }
   function gifLost() {
