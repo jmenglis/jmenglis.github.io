@@ -3,18 +3,6 @@ body {
   background: black;
   color: yellow; }
 
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-}
-.six.columns  {
-  width: 48%;
-}
-
-
 .container {
   position: relative;
   width: 100%;
@@ -29,6 +17,15 @@ body {
   content: "";
   display: table;
   clear: both; }
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+.six.columns {
+  width: 48%; }
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center; }
