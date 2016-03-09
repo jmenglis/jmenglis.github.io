@@ -9,78 +9,40 @@
     <!-- add scripts -->
   </head>
   <body>
-  <div class="container">
-    <div class="row">
-      <div class="six columns">
-        <h1>Ciphernomics</h1>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-    <div class="row">
-      <div class="six columns">
-        <h3 class="instructions">Game Instructions</h3>
-      </div>
-      <div class="six columns">
+    <div class="container">
+      <div class="row centerize">
+        <div class="six columns">
+          <h1>Ciphernomics</h1>
+          <h3 class="instruct">Game Instructions</h3>
+          <p>
+            You will be provided a word to decode based on a key.  You will
+            a specific amount of time at which the bomb will explode.  Once
+            you solve the puzzle you will be able to move onto the next level.
+          </p>
+          <div class="time"></div>
+          <div class="gifWin gifLose"></div>
+          <div class="word"></div>
+          <div class="loseWord"></div>
+          <div id ="submissionBox"></div>
+          <button type="button" name='startButton'>START TIMER</button>
+          <button type="button" name='resetButton'>RESET GAME</button>
+        </div>
+        <div class="six columns">
+        <br>
+        <br>
+        <br>
         <h3>Cipher Key</h3>
+        <h4><span class="red">A - 0 &nbsp;</span>B - 1 &nbsp;<span class="red">C - 2 &nbsp;</span>D - 3</h4>
+        <h4><span class="red">E - 4 &nbsp;</span>F - 5 &nbsp;<span class="red">G - 6 &nbsp;</span>H - 7</h4>
+        <h4><span class="red">I - 8 &nbsp;</span>J - 9 &nbsp;<span class="red">K - 10</span> L - 11</h4>
+        <h4><span class="red">M - 12</span> N - 13 <span class="red">O - 14 </span>P - 15</h4>
+        <h4><span class="red">Q - 16</span> R - 17 <span class="red">S - 18 </span>T - 19</h4>
+        <h4><span class="red">U - 20</span> V - 21 <span class="red">W - 22 </span>X - 23</h4>
+        <h4 style="padding-right: 135px;"><span class="red">Y - 24</span> Z - 25</h4>
+        <div class="equation"></div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="six columns">
-        <p>
-          You will be provided a word to decode based on a key.  You will
-          a specific amount of time at which the bomb will explode.  Once
-          you solve the puzzle you will be able to move onto the next level.
-        </p>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-    <div class="row">
-      <div class="six columns">
-        <div class="time"></div>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-    <div class="row centerize">
-      <div class="six columns">
-        <div class="gifWin gifLose"></div>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-    <div class="row">
-      <div class="six columns">
-        <div class="word"></div>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-    <div class="row">
-      <div class="six columns">
-        <div class="loseWord"></div>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-    <div class="row centerize">
-      <div class="six columns">
-        <div id ="submissionBox"></div>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-    <div class="row centerize">
-      <div class="six columns">
-      <button type="button" name='startButton'>START TIMER</button>
-      <button type="button" name='resetButton'>RESET GAME</button>
-      </div>
-      <div class="six columns">
-      </div>
-    </div>
-
-  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
   <script src="scripts/countdownClock.js"></script>
   <script src="scripts/app-ajax.js"></script>

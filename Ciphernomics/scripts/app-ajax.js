@@ -29,15 +29,19 @@ var alphaArray = {
   'y':24,
   'z':25
 };
+
+
 var convertArr = [];
 var finalString = '';
 var userInput = ''; // userInput is stored so that a user can type the ciphered word.
 var userLevel = 0; // userLevel is the level that the user is on.
-/* Coprimes for a future version of game to allow randomization of Affine
-Cipher
-var a = [1,3,5,7,9,11,15,17,19,21,23,25];
-var b = shifting the character by this much in cipher (b < 26);
-*/
+
+
+var randomNumber = Math.round(Math.random() * 12);
+var cArr = [1,3,5,7,9,11,15,17,19,21,23,25];
+var cShift = Math.round(Math.random() * 25);
+var cNum;
+
 window.onload = function(evt) {
   console.log("Ready for some AJAX fun");
 
@@ -74,7 +78,7 @@ window.onload = function(evt) {
     var numArray = [];
     var finalArray = [];
     convertArr.forEach(function(x) {
-      numArray.push((3 * alphaArray[x] + 2) % 26);
+      numArray.push((cNum * alphaArray[x] + cShift) % 26);
     });
     numArray.forEach(function(x) {
       finalArray.push(Object.keys(alphaArray)[x]);
@@ -99,16 +103,40 @@ window.onload = function(evt) {
       }
     });
   }
+  function getRandomCipher() {
+    var randomNumber = Math.round(Math.random() * 12);
+    var cNumReverseArr;
+    cNum = cArr[randomNumber];
+    console.log(cNum);
+    console.log(cNum + 'x + ' + cShift + ' % 26')
+    // Euclid's Extended Algorithm
+    function xgcd(a,b) {
+      if (b == 0) {
+        return [1, 0, a]
+      } else {
+      temp = xgcd(b, a % b)
+      x = temp[0]
+      y = temp[1]
+      d = temp[2]
+      return [y, x-y*Math.floor(a/b), d];
+      }
+    }
+    cNumReverseArr = xgcd(cNum,26);
+    var cNumReverse = cNumReverseArr.shift();
+    cEq = cNumReverse + '(x - ' + cShift + ') % 26';
+    $('div.equation').html('<H3>Decrypting Equation: ' + cEq + '</H3>');
+  }
 
   // getRandomWord which is ran on CLICK of start-timer
   // start the countdown timer on the click of the timer start button.
   // convert button into a class for the button as there will be multiple
   // buttons on the screen.
   $('button[name="startButton"]').click(function() {
+    getRandomCipher();
     getRandomWord();
     timer.start();
     $('p').remove('p');
-    $('.instructions').remove('instructions');
+    $('h3.instruct').remove('h3');
     $('#submissionBox').html('<input type="text" name="inputBox">')
     $(this).prop('disabled', true);
     enterKey();
