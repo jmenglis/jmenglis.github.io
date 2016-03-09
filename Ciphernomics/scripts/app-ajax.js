@@ -35,7 +35,6 @@ var userInput = ''; // userInput is stored so that a user can type the ciphered 
 var userLevel = 0; // userLevel is the level that the user is on.
 /* Coprimes for a future version of game to allow randomization of Affine
 Cipher
-
 var a = [1,3,5,7,9,11,15,17,19,21,23,25];
 var b = shifting the character by this much in cipher (b < 26);
 */
@@ -88,7 +87,6 @@ window.onload = function(evt) {
     $('input').keypress(function(evt) {
       if (evt.which === 13) {
         evt.preventDefault();
-        console.log('You Hit Enter');
         userInput = $.trim($(this).val().toLowerCase());
           if (localWord === userInput) {
             // json query to remove from body and keep the area clean
@@ -96,6 +94,7 @@ window.onload = function(evt) {
             $('.time').removeClass('time');
             $('input[name="inputBox"]').prop('disabled', true);
             $('.winner').html('<H1>YOU WIN ROUND</H1>'/*+parseInt(userLevel+1)*/);
+            gifWin();
           }
       }
     });
@@ -105,7 +104,7 @@ window.onload = function(evt) {
   // start the countdown timer on the click of the timer start button.
   // convert button into a class for the button as there will be multiple
   // buttons on the screen.
-  $('button').click(function() {
+  $('button[name="startButton"]').click(function() {
     getRandomWord();
     timer.start();
     $('p').remove('p');
@@ -118,23 +117,43 @@ window.onload = function(evt) {
   // gameOver function kills the game
   function gameOver() {
     if (timer.expired()) {
+      gifLost();
       $('input[name="inputBox"]').prop('disabled', true);
       $('.time').addClass('loser');
       $('.time').removeClass('time');
       $('.loser').html('<H1 class="red">YOU LOST!</H1>'/*+parseInt(userLevel+1)*/);
     }
   }
-};
-
-/*$(document).ajaxSuccess(function() {
-  console.log(localWord);
-  for (var userLevel = 0; userLevel < 5; userLevel++) {
-    if (localWord === userInput.toLowerCase()) {
-      // json query to remove from body and keep the area clean
-      $('body').append('YOU WIN ROUND #'+parseInt(userLevel+1));
-    }
+  function gifLost() {
+    $.ajax({
+      type: 'get',
+      dataType: 'json',
+      url: 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=table+flip',
+      success: function(img) {
+        var gifImg = $('<img>');
+        gifImg.attr("src", img.data.image_url)
+        $('.gifLose').append(gifImg);
+      }
+    });
   }
-});*/
+  function gifWin() {
+    $.ajax({
+      type: 'get',
+      dataType: 'json',
+      url: 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=victory',
+      success: function(img) {
+        var gifImg = $('<img>');
+        gifImg.attr("src", img.data.image_url)
+        $('.gifWin').append(gifImg);
+        $('.gifWin').removeClass('gifLose')
+      }
+    });
+  }
+  $('button[name="resetButton"]').click(function() {
+    location.reload();
+  })
+
+};
 
 
 
@@ -145,7 +164,7 @@ window.onload = function(evt) {
 // var m = total number of letters in the alphabet = 26
 // E(x) = ax+b mod m
 
-var a = 5
+/*var a = 5
 var b = 8
 var m = 26
 var x = 13 // match alphabet to number and get return.
@@ -155,7 +174,7 @@ function affineCipher() {
   console.log(result);
 }
 
-
+*/
 
 
 

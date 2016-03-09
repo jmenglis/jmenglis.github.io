@@ -3,6 +3,18 @@ body {
   background: black;
   color: yellow; }
 
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+.six.columns  {
+  width: 48%;
+}
+
+
 .container {
   position: relative;
   width: 100%;
@@ -44,9 +56,19 @@ button[name='startButton'] {
   padding: 5px 10px;
   font-family: monaco, Consolas, 'Lucida Console', monospace;
   font-size: 16px;
-  background: #e74c3c; }
+  background: #2ecc71;
+  width: 150px; }
   button[name='startButton']:disabled {
-    background: #f8c9c4;
+    background: #a8ebc4;
     transition: all 1s ease; }
+
+button[name='resetButton'] {
+  color: white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 16px;
+  background: #e74c3c;
+  width: 150px; }
 
 /*# sourceMappingURL=style.css.map */

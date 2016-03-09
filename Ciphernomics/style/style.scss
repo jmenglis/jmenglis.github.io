@@ -59,5 +59,16 @@ button[name='startButton'] {
   padding: 5px 10px;
   font-family: monaco, Consolas, 'Lucida Console', monospace;
   font-size: 16px;
-  @include button-bg(#e74c3c);
+  @include button-bg(#2ecc71);
+  width: 150px;
+}
+
+button[name='resetButton'] {
+  color: white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 16px;
+  background: #e74c3c;
+  width: 150px;
 }
