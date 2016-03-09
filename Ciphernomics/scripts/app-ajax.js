@@ -29,7 +29,7 @@ var alphaArray = {
   'y':24,
   'z':25
 };
-
+var convertArr = [];
 var userInput = ''; // userInput is stored so that a user can type the ciphered word.
 var userLevel = 0; // userLevel is the level that the user is on.
 /* Coprimes for a future version of game to allow randomization of Affine
@@ -46,12 +46,15 @@ window.onload = function(evt) {
   timeObj = countDownTimer.parse(300);
   format(timeObj.minutes, timeObj.seconds);
   timer.onTick(format).onTick(gameOver)
+
   // Formats the time into the proper time and outputs to the div ID #item
   function format(minutes, seconds) {
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
-    $('#time').text(minutes + ":" + seconds);
+    $('.time').text(minutes + ":" + seconds);
   }
+
+  // convert localWord into finalword which displays for the user
   function getRandomWord() {
     var lengthOfWord = 5;
     $.ajax ({
@@ -60,23 +63,35 @@ window.onload = function(evt) {
       url: 'http://randomword.setgetgo.com/get.php?len=' + lengthOfWord,
       jsonpCallback: 'randomWord',
       success: function randomWord(data) {
-        return localWord = data.Word.toLowerCase();
+        localWord = data.Word.toLowerCase();
+        return localWord;
       }
     });
   }
+  $(document).ajaxSuccess(function() {
+    convertArr = localWord.split("");
+    console.log(convertArr)
+  });
   function enterKey() {
     $('input').keypress(function(evt) {
       if (evt.which === 13) {
         evt.preventDefault();
         console.log('You Hit Enter');
+        userInput = $.trim($(this).val().toLowerCase());
+          if (localWord === userInput) {
+            // json query to remove from body and keep the area clean
+            $('.time').addClass('winner');
+            $('.time').removeClass('time');
+            $('.winner').html('<H1>YOU WIN ROUND</H1>'/*+parseInt(userLevel+1)*/);
+          }
       }
     });
   }
+
   // getRandomWord which is ran on CLICK of start-timer
   // start the countdown timer on the click of the timer start button.
   // convert button into a class for the button as there will be multiple
   // buttons on the screen.
-
   $('button').click(function() {
     getRandomWord();
     timer.start();
@@ -94,19 +109,15 @@ window.onload = function(evt) {
   }
 };
 
-
-
-$(document).ajaxSuccess(function() {
+/*$(document).ajaxSuccess(function() {
   console.log(localWord);
   for (var userLevel = 0; userLevel < 5; userLevel++) {
     if (localWord === userInput.toLowerCase()) {
       // json query to remove from body and keep the area clean
       $('body').append('YOU WIN ROUND #'+parseInt(userLevel+1));
-    } else {
-      // complete until timer runs out.
     }
   }
-});
+});*/
 
 
 
