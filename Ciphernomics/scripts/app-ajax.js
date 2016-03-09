@@ -30,6 +30,7 @@ var alphaArray = {
   'z':25
 };
 var convertArr = [];
+var finalString = '';
 var userInput = ''; // userInput is stored so that a user can type the ciphered word.
 var userLevel = 0; // userLevel is the level that the user is on.
 /* Coprimes for a future version of game to allow randomization of Affine
@@ -45,6 +46,7 @@ window.onload = function(evt) {
   timer = new countDownTimer(300);
   timeObj = countDownTimer.parse(300);
   format(timeObj.minutes, timeObj.seconds);
+
   timer.onTick(format).onTick(gameOver)
 
   // Formats the time into the proper time and outputs to the div ID #item
@@ -64,14 +66,24 @@ window.onload = function(evt) {
       jsonpCallback: 'randomWord',
       success: function randomWord(data) {
         localWord = data.Word.toLowerCase();
-        return localWord;
       }
     });
   }
   $(document).ajaxSuccess(function() {
     convertArr = localWord.split("");
     console.log(convertArr)
+    var numArray = [];
+    var finalArray = [];
+    convertArr.forEach(function(x) {
+      numArray.push((3 * alphaArray[x] + 2) % 26);
+    });
+    numArray.forEach(function(x) {
+      finalArray.push(Object.keys(alphaArray)[x]);
+    });
+    finalString = finalArray.join('');
+    $('.word').html('<h2><strong>Dicipher this word: </strong>' + finalString)
   });
+
   function enterKey() {
     $('input').keypress(function(evt) {
       if (evt.which === 13) {
@@ -103,8 +115,9 @@ window.onload = function(evt) {
   // gameOver function kills the game
   function gameOver() {
     if (timer.expired()) {
-      $('#body').html('<h1>Game is now over</h1>');
-      $('#body').append(/*restart game from here.*/)
+      $('.time').addClass('winner');
+      $('.time').removeClass('time');
+      $('.winner').html('<H1>YOU WIN ROUND</H1>'/*+parseInt(userLevel+1)*/);
     }
   }
 };
