@@ -45,8 +45,8 @@ window.onload = function(evt) {
   console.log("Ready for some AJAX fun");
 
   // Creating the constructor function with start time of
-  timer = new countDownTimer(10);
-  timeObj = countDownTimer.parse(10);
+  timer = new countDownTimer(300);
+  timeObj = countDownTimer.parse(300);
   format(timeObj.minutes, timeObj.seconds);
 
   timer.onTick(format).onTick(gameOver)
@@ -98,7 +98,7 @@ window.onload = function(evt) {
             $('.loseWord').removeClass('loseWord');
             $('input[name="inputBox"]').prop('disabled', true);
             $('.winner').html('<H1>YOU WIN ROUND #' + roundNum + '</H1>');
-            $('.nextLevel').html('<button type="button" name="roundUp">Next Round</button>');
+            $('.nextLevel').html('<button type="button" name="roundUp">NEXT ROUND</button>');
             nextLevel();
             gifWin();
           }

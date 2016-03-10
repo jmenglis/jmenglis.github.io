@@ -73,6 +73,17 @@ button[name='startButton'] {
   width: 150px;
 }
 
+button[name='roundUp'] {
+  color: white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 16px;
+  @include button-bg(#2ecc71);
+  width: 150px;
+}
+
 button[name='resetButton'] {
   color: white;
   border-radius: 3px;
