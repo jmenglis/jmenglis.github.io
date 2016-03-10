@@ -30,12 +30,11 @@ var alphaArray = {
   'z':25
 };
 
-
 var convertArr = [];
 var finalString = '';
 var userInput = ''; // userInput is stored so that a user can type the ciphered word.
-var userLevel = 0; // userLevel is the level that the user is on.
-
+var lengthOfWord = parseInt(localStorage.getItem("roundLength")) || 5; // userLevel is the level that the user is on.
+var roundNum = parseInt(localStorage.getItem("whatRound")) || 1;
 
 var randomNumber = Math.round(Math.random() * 12);
 var cArr = [1,3,5,7,9,11,15,17,19,21,23,25];
@@ -46,8 +45,8 @@ window.onload = function(evt) {
   console.log("Ready for some AJAX fun");
 
   // Creating the constructor function with start time of
-  timer = new countDownTimer(5);
-  timeObj = countDownTimer.parse(5);
+  timer = new countDownTimer(10);
+  timeObj = countDownTimer.parse(10);
   format(timeObj.minutes, timeObj.seconds);
 
   timer.onTick(format).onTick(gameOver)
@@ -58,10 +57,10 @@ window.onload = function(evt) {
     seconds = seconds < 10 ? "0" + seconds : seconds;
     $('.time').html("<h2>" + minutes + ":" + seconds + "</h2>");
   }
+  $('.currentRound').html('<h2>ROUND #' + roundNum + '<h2>');
 
   // convert localWord into finalword which displays for the user
   function getRandomWord() {
-    var lengthOfWord = 5;
     $.ajax ({
       type: 'GET',
       dataType: 'jsonp',
@@ -96,8 +95,11 @@ window.onload = function(evt) {
             // json query to remove from body and keep the area clean
             $('.time').addClass('winner');
             $('.time').removeClass('time');
+            $('.loseWord').removeClass('loseWord');
             $('input[name="inputBox"]').prop('disabled', true);
-            $('.winner').html('<H1>YOU WIN ROUND</H1>'/*+parseInt(userLevel+1)*/);
+            $('.winner').html('<H1>YOU WIN ROUND #' + roundNum + '</H1>');
+            $('.nextLevel').html('<button type="button" name="roundUp">Next Round</button>');
+            nextLevel();
             gifWin();
           }
       }
@@ -157,7 +159,7 @@ window.onload = function(evt) {
     $.ajax({
       type: 'get',
       dataType: 'json',
-      url: 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=table+flip',
+      url: 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=explosion',
       success: function(img) {
         var gifImg = $('<img>');
         gifImg.attr("src", img.data.image_url)
@@ -179,9 +181,20 @@ window.onload = function(evt) {
     });
   }
   $('button[name="resetButton"]').click(function() {
+    localStorage.setItem("roundLength", 0);
+    localStorage.setItem("whatRound", 1);
     location.reload();
-  })
+  });
 
+  function nextLevel() {
+    $('button[name="roundUp"]').click(function() {
+      lengthOfWord = lengthOfWord + 2;
+      roundNum = roundNum + 1
+      localStorage.setItem("roundLength", lengthOfWord);
+      localStorage.setItem("whatRound", roundNum);
+      location.reload();
+    });
+  }
 };
 
 
