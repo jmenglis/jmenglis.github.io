@@ -35,7 +35,6 @@ var finalString = '';
 var userInput = ''; // userInput is stored so that a user can type the ciphered word.
 var lengthOfWord = parseInt(localStorage.getItem("roundLength")) || 5; // userLevel is the level that the user is on.
 var roundNum = parseInt(localStorage.getItem("whatRound")) || 1;
-
 var randomNumber = Math.round(Math.random() * 12);
 var cArr = [1,3,5,7,9,11,15,17,19,21,23,25];
 var cShift = Math.round(Math.random() * 25);
@@ -73,7 +72,6 @@ window.onload = function(evt) {
   }
   $(document).ajaxSuccess(function() {
     convertArr = localWord.split("");
-    console.log(convertArr)
     var numArray = [];
     var finalArray = [];
     convertArr.forEach(function(x) {
@@ -109,17 +107,16 @@ window.onload = function(evt) {
     var randomNumber = Math.round(Math.random() * 12);
     var cNumReverseArr;
     cNum = cArr[randomNumber];
-    console.log(cNum);
     console.log(cNum + 'x + ' + cShift + ' % 26')
     // Euclid's Extended Algorithm
     function xgcd(a,b) {
       if (b == 0) {
         return [1, 0, a]
       } else {
-      temp = xgcd(b, a % b)
-      x = temp[0]
-      y = temp[1]
-      d = temp[2]
+        temp = xgcd(b, a % b)
+        x = temp[0]
+        y = temp[1]
+        d = temp[2]
       return [y, x-y*Math.floor(a/b), d];
       }
     }
