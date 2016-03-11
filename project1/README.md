@@ -11,13 +11,13 @@ equation will be provided and the variable x will be replaced by the number repr
 ### Screen Prints
 -
 #### Game Home Screen
-![Imgur]()(http://i.imgur.com/X5VAv63.png)
+![Imgur - Home Screen][image-1]
 -
 #### Winning Screen
-![Imgur]()(http://i.imgur.com/5rH3GBT.png)
+![Imgur - Winning Screen][image-2]
 -
 #### Losing Screen
-![Imgur]()(http://i.imgur.com/GxHziy5.png)
+![Imgur - Losing Screen][image-3]
 -
 ### Technologies Used
 - HTML5
@@ -29,7 +29,7 @@ equation will be provided and the variable x will be replaced by the number repr
 - jQuery
 - JSON
 - Giphy
-- [Random Word Generator][4] 
+- [Random Word Generator][1] 
 
 ### Approach Taken
 - Developed idea from Cicada 3301 challenge.  This challenge uses different variations of cryptography.
@@ -38,12 +38,16 @@ equation will be provided and the variable x will be replaced by the number repr
 - Built HTML and CSS framework while concurrently using jQuery to add elements to the DOM.
 
 ### Installation Instructions
-Navigate to [here][5] and press start.
+Navigate to [here][2] and press start.
 
 ### Unsolved Mysteries/Problems
 - None to my knowledge but could have added two player and additional Cipher types.
 - Would like to add a score counter.
 - Needs to be more dynamic.
 
-[4]:	http://randomword.setgetgo.com/ "Random Word Generator"
-[5]:	http://jmenglis.github.io/Ciphernomics/index.html "Ciphernomics"
+[1]:	http://randomword.setgetgo.com/ "Random Word Generator"
+[2]:	http://jmenglis.github.io/Ciphernomics/index.html "Ciphernomics"
+
+[image-1]:	http://i.imgur.com/X5VAv63.png "Imgur - Home Screen"
+[image-2]:	http://i.imgur.com/5rH3GBT.png "Imgur - Winning Screen"
+[image-3]:	http://i.imgur.com/GxHziy5.png "Imgur - Losing Screen"
