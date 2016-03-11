@@ -9,7 +9,6 @@ game requires to complete each word in 5:00 minutes.  The key
 equation will be provided and the variable x will be replaced by the number representing the alphabet.  % 26 represents the remainder after long division is complete. Once the equation is calculated you will find the number on the alphabet and that will be the letter of the decoded word.
 —
 ### Screen Prints
--
 #### Game Home Screen
 ![Imgur - Home Screen][image-1]
 -
