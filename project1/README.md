@@ -11,13 +11,13 @@ equation will be provided and the variable x will be replaced by the number repr
 ### Screen Prints
 -
 #### Game Home Screen
-[Imgur]()(http://i.imgur.com/X5VAv63.png)
+![Imgur]()(http://i.imgur.com/X5VAv63.png)
 -
 #### Winning Screen
-[Imgur]()(http://i.imgur.com/5rH3GBT.png)
+![Imgur]()(http://i.imgur.com/5rH3GBT.png)
 -
 #### Losing Screen
-[Imgur]()(http://i.imgur.com/GxHziy5.png)
+![Imgur]()(http://i.imgur.com/GxHziy5.png)
 -
 ### Technologies Used
 - HTML5
