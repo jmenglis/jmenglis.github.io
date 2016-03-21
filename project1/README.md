@@ -43,6 +43,7 @@ Navigate to [here][2] and press start.
 - None to my knowledge but could have added two player and additional Cipher types.
 - Would like to add a score counter.
 - Needs to be more dynamic.
+- Allow user to add name for multiplayer
 
 [1]:	http://randomword.setgetgo.com/ "Random Word Generator"
 [2]:	http://jmenglis.github.io/Ciphernomics/index.html "Ciphernomics"
