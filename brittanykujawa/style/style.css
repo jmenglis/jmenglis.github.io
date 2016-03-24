@@ -18,6 +18,8 @@ body {
   overflow: hidden; }
   body h2 {
     letter-spacing: 0.4em; }
+  body h5 {
+    letter-spacing: 0.3em; }
 
 .centertext {
   text-align: center; }
