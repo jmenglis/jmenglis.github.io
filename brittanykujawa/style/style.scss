@@ -1,0 +1,38 @@
+$font-stack: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+
+html, body {
+  height: 100%;
+}
+.table-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.table-block {
+  display: table-row;
+  height: 1px;
+}
+.footer-push {
+  height: auto;
+}
+#footer {
+}
+
+
+body {
+  font-family: $font-stack;
+  overflow:hidden;
+  h2 {
+    letter-spacing: 0.4em;
+  }
+}
+
+.centertext {
+  text-align: center;
+}
+.righttext {
+  text-align: right;
+}
+.lefttext {
+  text-align: left;
+}

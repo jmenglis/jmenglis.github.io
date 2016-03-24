@@ -1,0 +1,31 @@
+html, body {
+  height: 100%; }
+
+.table-container {
+  display: table;
+  height: 100%;
+  width: 100%; }
+
+.table-block {
+  display: table-row;
+  height: 1px; }
+
+.footer-push {
+  height: auto; }
+
+body {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  overflow: hidden; }
+  body h2 {
+    letter-spacing: 0.4em; }
+
+.centertext {
+  text-align: center; }
+
+.righttext {
+  text-align: right; }
+
+.lefttext {
+  text-align: left; }
+
+/*# sourceMappingURL=style.css.map */
