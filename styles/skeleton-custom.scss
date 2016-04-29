@@ -41,12 +41,21 @@ nav {
       font-size: 16px;
       padding-right: 5px;
       padding-top: 8px;
+      a {
+        color: $secondary-text-color;
+        text-decoration: none;
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
     }
-    a {
-      color: $secondary-text-color;
-      text-decoration: none;
-      &:hover {
-        color: $link-hover-color;
+    h4 {
+      a {
+        color: $title-text-color;
+        text-decoration: none;
+        &:hover {
+          color: $title-text-color;
+        }
       }
     }
   }
