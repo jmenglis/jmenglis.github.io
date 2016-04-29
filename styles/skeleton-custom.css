@@ -28,11 +28,11 @@ nav ul {
       text-decoration: none; }
       nav ul li a:hover {
         color: rgba(114, 114, 114, 0.7); }
-  nav ul h4 a {
-    color: whitesmoke;
-    text-decoration: none; }
-    nav ul h4 a:hover {
-      color: whitesmoke; }
+nav h4 a {
+  color: whitesmoke;
+  text-decoration: none; }
+  nav h4 a:hover {
+    color: whitesmoke; }
 
 .img-responsive {
   max-width: 100%; }
