@@ -50,14 +50,16 @@ nav {
       }
     }
   }
-  h4 a {
-      color: $title-text-color;
-      text-decoration: none;
-      &:hover {
-        color: $title-text-color;
-      }
-    }
 }
+h4{
+    a {
+        color: $title-text-color;
+        text-decoration: none;
+        &:hover {
+          color: $title-text-color;
+        }
+    }
+  }
 
 
 .img-responsive {
