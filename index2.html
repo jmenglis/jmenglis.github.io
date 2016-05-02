@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home | I am Josh English</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!--  <link href="styles/normalize.css" type="text/css" rel="stylesheet" /> -->
+  <!-- <link href="styles/skeleton.css" type="text/css" rel="stylesheet" /> -->
+  <link href="styles/skeleton-custom.css" type="text/css" rel="stylesheet" />
+  <link href="styles/font-awesome.css" type="text/css" rel="stylesheet" />
+  <link href="styles/animate.css" type="text/css" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="scripts/typed.js"></script>
+  <script src="scripts/app.js"></script>
+  </head>
+  <body>
+    <section id="all">
+
+      <aside class="left-half animated fadeInLeft">
+      </aside>
+      <aside class="right-half animated fadeInRight">
+        <div class="mytext">
+          <h1>Josh English</h1>
+          <span class="element" style="font-size: 18px; color:red;"></span>
+          <p>I am a self starting Full Stack Web Developer, financial technology guru and entrepreneur that is driven to solve problems creatively.
+          Using my skills in web development and my entrepreneurial attitude allow me to to visualize beautiful end products.
+          I love having a raw canvas to creatively and organically paint new ideas.  I hope that I can help address the challenges that you face to
+          help fulfill your company’s goals and vision.</p>
+          <h2>Skills</h2>
+          <ul>
+            <li>Web Development: HTML5, CSS3, Sass, Less, Javscript, jQuery, Angular, React, Node, Ruby, Sinatra, Rails, Bootstrap, Skeleton, Express, AJAX, MongoDB, PostgreSQL, T-SQL, PL/SQL, Handlebars, Mocha</li>
+            <li>Other: Git, VCS, CMS(Wordpress, Kirby & Gravity), Github, Ciphers, Encryption</li>
+            <li>Deployment: Heroku, Amazon Web Services, EC2, Digital Ocean, Ubuntu Linux</li>
+          </ul>
+          <h2>Projects</h2>
+          <ul>
+          <li><a href="#Kastanza">Kastanza["The Bathroom App"]</a></li>
+          <li><a href="#ChiStreetArt">ChiStreetArt["The Street Art Tracking App"]</a></li>
+          <li>redothecube["Self-Hosted Business Podcast"]</li>
+          <li>Ciphernomics["Fun Cipher Game"]</li>
+          <li>Brittany_Kujawa["Portfolio"]</li>
+          <li>Auto_Twitter_DMer["An Auto Tweeter for my account"]</li>
+          </ul>
+        </div>
+      </aside>
+<!-- Data for the Popups -->
+      <div id="Kastanza" class="overlay">
+        <div class="popup">
+          <h2>Kastanza App</h2>
+          <a class="close" href="#all">&times;</a>
+          <div class="content">
+            <strong>Summary:</strong> The purpose of this application is to help people find clean bathrooms throughout the city.  Users can rate bathrooms by giving using the star rating system.<br />
+            <strong>Technologies Used:</strong> HTML5, CSS3, SASS, Ruby, Sinatra, SEQUEL ORM, SQL, Javascript, jQuery, PostgreSQL(Production), SQLite(Development), Heroku <br />
+            <strong>Project Status:</strong> Alpha (WIP)<br />
+            <strong>Unsolved Problems:</strong>
+            <ul>
+              <li>
+                Currently the average number of stars is calculated on the fly when the server send the data back to the client side.
+                A better solution would be to cache data for faster access using Redis or Firebase.
+              </li>
+              <li>
+                 Some small unresolved JS issues where selectors are trying to select items that do not exist.  At this moment they do not effect functionality.
+              </li>
+            </ul>
+            <div class="centerizeIcons">
+              <a href="https://github.com/jmenglis/wdi_project_two"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+              <a href="https://kastanza.herokuapp.com/"><i class="fa fa-chrome fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ChiStreetArt" class="overlay">
+        <div class="popup">
+          <h2>ChiStreetArt App</h2>
+          <a class="close" href="#all">&times;</a>
+          <div class="content">
+            <strong>Summary:</strong> Just like any other world class city, Chicago offers an amazing array of art that can be seen in a museum or on a brick wall. A ride up and down the L will only expose you to a fraction of the Chicago street art on display throughout the city.
+            This page is intended to lessen that gap. It is our hope to catalogue the history of installations and commissioned walls through crowd sourced entries, allowing you to follow the transition of these communal art spaces.
+            We can’t always be the eyes on the street and need your help to allow this project to function. We’d love to see what moves and inspires you. Send us your photos. <br />
+            <strong>Technologies Used:</strong> HTML5, CSS3, LESS, Node, Express.js, Handlebars, MongoDB, Javascript, jQuery, BCrypt, Heroku, Digital Ocean(Ubuntu Linux), MLabs<br />
+            <strong>Project Status:</strong> Alpha (WIP)<br />
+            <strong>Unsolved Problems:</strong>
+              <ul>
+                <li>
+                  Add image carousel for each location.
+                </li>
+                <li>
+                   Issues with image sizing and resizing.
+                </li>
+                <li>
+                   Betteer efficiency with the API server.
+                </li>
+                <li>
+                   Select a Javascript Framework like React/Angular.
+                </li>
+                <li>
+                   Create a mobile application for the app.
+                </li>
+              </ul>
+            <div class="centerizeIcons">
+              <a href="https://github.com/Platypi-posse/client-app"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+              <a href="https://chistreetart.herokuapp.com/"><i class="fa fa-chrome fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  </html>

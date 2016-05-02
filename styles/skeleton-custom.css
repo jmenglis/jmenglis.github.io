@@ -1,88 +1,67 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,400italic,600,700);
-html {
-  background: black no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic);
+html, body, section, aside {
+  height: 100%;
+  margin: auto 0;
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  color: #333333; }
 
-body {
-  font-family: Raleway, "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-  padding-top: 60px; }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
-    color: whitesmoke;
-    text-align: center;
-    margin-bottom: 0px; }
-
-nav ul {
-  list-style: none;
-  padding-top: 0px;
-  margin-bottom: 0px; }
-  nav ul li {
-    display: inline-block;
-    font-size: 16px;
-    padding-right: 5px;
-    padding-top: 8px; }
-    nav ul li a {
-      color: #727272;
-      text-decoration: none; }
-      nav ul li a:hover {
-        color: rgba(114, 114, 114, 0.7); }
-
-h4 a {
-  color: whitesmoke;
-  text-decoration: none; }
-  h4 a:hover {
-    color: whitesmoke; }
-
-.img-responsive {
-  max-width: 100%;
-  height: auto;
-  display: block; }
-
-.image {
-  position: relative;
+section {
   width: 100%;
-  height: 435px;
-  overflow: hidden; }
-  .image h3 {
-    position: absolute;
-    top: 10px;
-    left: 25px;
-    width: 100%;
-    text-align: left;
-    color: black; }
+  background: #F7F7F7; }
 
-.fontSpacing {
-  letter-spacing: 3px; }
+.left-half {
+  background-image: url("../images/josh.jpg");
+  background-size: cover;
+  float: left;
+  width: 50%; }
 
-.blankHeight {
-  height: 24px; }
+.right-half {
+  float: left;
+  width: 50%;
+  overflow: auto; }
 
-.footer {
-  text-align: center;
-  color: whitesmoke;
-  letter-spacing: 3px; }
-  .footer a {
-    color: #727272;
-    text-decoration: none; }
-    .footer a:hover {
-      color: rgba(114, 114, 114, 0.7); }
-
-.navicons {
-  list-style: none;
-  padding-top: 0px;
+h1 {
   margin-bottom: 0px;
-  text-align: right; }
-  .navicons li {
-    display: inline-block;
-    padding-right: 0px;
-    padding-top: 5px; }
-    .navicons li a {
-      color: #727272;
-      text-decoration: none; }
-      .navicons li a:hover {
-        color: rgba(114, 114, 114, 0.7); }
+  font-size: 40px; }
+h2 {
+  margin-bottom: 0px; }
+ul {
+  margin-top: 2px; }
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  color: red; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.centerizeIcons {
+  text-align: center;
+  letter-spacing: 10px; }
+
+.mytext {
+  padding: 0px 25px 0 25px; }
 
 .overlay {
   position: fixed;
@@ -102,21 +81,16 @@ h4 a {
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: #fff;
+  background: #F7F7F7;
   border-radius: 5px;
   width: 30%;
   position: relative;
   transition: all 5s ease-in-out; }
-  .popup a {
-    color: #727272;
-    text-decoration: none; }
-    .popup a:hover {
-      color: rgba(114, 114, 114, 0.7); }
 
 .popup h2 {
   margin-top: 0;
-  color: #333;
-  font-family: Raleway, "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
+  color: #333333;
+  font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
 .popup .close {
   position: absolute;
@@ -126,7 +100,7 @@ h4 a {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333; }
+  color: #primary-text-color; }
 
 .popup .close:hover {
   color: #06D85F; }
@@ -144,5 +118,11 @@ h4 a {
 .centerizeIcons {
   text-align: center;
   letter-spacing: 10px; }
+
+a {
+  color: #727272;
+  text-decoration: none; }
+  a:hover {
+    color: rgba(114, 114, 114, 0.7); }
 
 /*# sourceMappingURL=skeleton-custom.css.map */
