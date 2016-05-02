@@ -2,33 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
   <title>Home | I am Josh English</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="styles/normalize.css" type="text/css" rel="stylesheet" />
+  <link href="styles/skeleton.css" type="text/css" rel="stylesheet" />
+  <link href="styles/skeleton-custom.css" type="text/css" rel="stylesheet" />
+  <link href="styles/font-awesome.css" type="text/css" rel="stylesheet" />
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-<link href="styles/normalize.css" type="text/css" rel="stylesheet" />
-<link href="styles/skeleton.css" type="text/css" rel="stylesheet" />
-<link href="styles/skeleton-custom.css" type="text/css" rel="stylesheet" />
-<link href="styles/font-awesome.css" type="text/css" rel="stylesheet" />
-
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
@@ -47,7 +32,18 @@
     <div class="four columns">
       <h4 class="fontSpacing"><a href="#home">JOSH ENGLISH</a></h4>
     </div>
-    <div class="four columns blankHeight">
+    <div class="four columns">
+        <ul class="navicons">
+            <li>
+              <a href="http://twitter.com/joshenglish"><i class="fa fa-twitter-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/jmenglis"><i class="fa fa-github-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/joshenglish"><i class="fa fa-linkedin-square fa-2x"></i></a>
+            </li>
+        </ul>
     </div>
   </div>
   <hr>
@@ -55,33 +51,134 @@
     <div class="container">
       <div class="row">
         <div class="image">
-          <img src="images/blogread.jpg" width="1233" height="402">
-          <h3>Main Project Goes Here</h3>
+          <a href="#Kastanza">
+            <img src="images/kastanza.png" width="1231" height="436">
+            <h3>Kastanza</h3>
+          </a>
+        </div>
+      </div>
+      <div id="Kastanza" class="overlay">
+        <div class="popup">
+          <h2>Kastanza App</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            <strong>Summary:</strong> The purpose of this application is to help people find clean bathrooms throughout the city.  Users can rate bathrooms by giving using the star rating system.<br />
+            <strong>Technologies Used:</strong> HTML5, CSS3, SASS, Ruby, Sinatra, SEQUEL ORM, SQL, Javascript, jQuery, PostgreSQL(Production), SQLite(Development), Heroku <br />
+            <strong>Project Status:</strong> Alpha (WIP)<br />
+            <strong>Unsolved Problems:</strong>
+              <ul>
+                <li>
+                  Currently the average number of stars is calculated on the fly when the server send the data back to the client side.
+                  A better solution would be to cache data for faster access using Redis or Firebase.
+                </li>
+                <li>
+                   Some small unresolved JS issues where selectors are trying to select items that do not exist.  At this moment they do not effect functionality.
+                </li>
+              </ul>
+            <div class="centerizeIcons">
+              <a href="https://github.com/jmenglis/wdi_project_two"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+              <a href="https://kastanza.herokuapp.com/"><i class="fa fa-chrome fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </div>
       </div>
       <hr>
       <div class="row">
         <div class="four columns">
-        <h4>Content Goes Here</h4>
-        <img class="img-responsive" src="images/placeholder.png">
+          <h4>ChiStreetArt</h4>
+          <a href="#ChiStreetArt">
+            <img class="img-responsive" src="images/placeholder.png">
+          </a>
+        </div>
+        <div id="ChiStreetArt" class="overlay">
+          <div class="popup">
+            <h2>ChiStreetArt App</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              <strong>Summary:</strong> Just like any other world class city, Chicago offers an amazing array of art that can be seen in a museum or on a brick wall. A ride up and down the L will only expose you to a fraction of the Chicago street art on display throughout the city.
+              This page is intended to lessen that gap. It is our hope to catalogue the history of installations and commissioned walls through crowd sourced entries, allowing you to follow the transition of these communal art spaces.
+              We can’t always be the eyes on the street and need your help to allow this project to function. We’d love to see what moves and inspires you. Send us your photos. <br />
+              <strong>Technologies Used:</strong> HTML5, CSS3, LESS, Node, Express.js, Handlebars, MongoDB, Javascript, jQuery, BCrypt, Heroku, Digital Ocean(Ubuntu Linux), MLabs<br />
+              <strong>Project Status:</strong> Alpha (WIP)<br />
+              <strong>Unsolved Problems:</strong>
+                <ul>
+                  <li>
+                    Add image carousel for each location.
+                  </li>
+                  <li>
+                     Issues with image sizing and resizing.
+                  </li>
+                  <li>
+                     Betteer efficiency with the API server.
+                  </li>
+                  <li>
+                     Select a Javascript Framework like React/Angular.
+                  </li>
+                  <li>
+                     Create a mobile application for the app.
+                  </li>
+                </ul>
+              <div class="centerizeIcons">
+                <a href="https://github.com/Platypi-posse/client-app"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+                <a href="https://chistreetart.herokuapp.com/"><i class="fa fa-chrome fa-2x" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="six columns">
-        <h4>Content Goes Here</h4>
-        <img class="img-responsive" src="images/placeholder.png">
+          <h4>redothecube.com</h4>
+          <a href="#redothecube">
+            <img class="img-responsive" src="images/placeholder.png">
+          </a>
+        </div>
+        <div id="redothecube" class="overlay">
+          <div class="popup">
+            <h2>redothecube.com</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              <strong>Summary:</strong> Just like any other world class city, Chicago offers an amazing array of art that can be seen in a museum or on a brick wall. A ride up and down the L will only expose you to a fraction of the Chicago street art on display throughout the city.
+              This page is intended to lessen that gap. It is our hope to catalogue the history of installations and commissioned walls through crowd sourced entries, allowing you to follow the transition of these communal art spaces.
+              We can’t always be the eyes on the street and need your help to allow this project to function. We’d love to see what moves and inspires you. Send us your photos. <br />
+              <strong>Technologies Used:</strong> HTML5, CSS3, LESS, Node, Express.js, Handlebars, MongoDB, Javascript, jQuery, BCrypt, Heroku, Digital Ocean(Ubuntu Linux), MLabs<br />
+              <strong>Project Status:</strong> Alpha (WIP)<br />
+              <strong>Unsolved Problems:</strong>
+                <ul>
+                  <li>
+                    Add image carousel for each location.
+                  </li>
+                  <li>
+                     Issues with image sizing and resizing.
+                  </li>
+                  <li>
+                     Betteer efficiency with the API server.
+                  </li>
+                  <li>
+                     Select a Javascript Framework like React/Angular.
+                  </li>
+                  <li>
+                     Create a mobile application for the app.
+                  </li>
+                </ul>
+              <div class="centerizeIcons">
+                <a href="https://github.com/Platypi-posse/client-app"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+                <a href="https://chistreetart.herokuapp.com/"><i class="fa fa-chrome fa-2x" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="four columns">
-        <h4>Content Goes Here</h4>
-        <img class="img-responsive" src="images/placeholder.png">
+          <h4>Auto Twitter DMer</h4>
+          <img class="img-responsive" src="images/placeholder.png">
         </div>
         <div class="four columns">
-        <h4>Content Goes Here</h4>
-        <img class="img-responsive" src="images/placeholder.png">
+          <h4>Ciphernomics</h4>
+          <img class="img-responsive" src="images/placeholder.png">
         </div>
         <div class="four columns">
-        <h4>Content Goes Here</h4>
-        <img class="img-responsive" src="images/placeholder.png">
+          <h4>BrittanyKujawa.com</h4>
+          <img class="img-responsive" src="images/placeholder.png">
         </div>
       </div>
       <div class="row">

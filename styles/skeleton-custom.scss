@@ -14,6 +14,7 @@ $divider-color: rgba(182, 182, 182, 1);
 $title-text-color: rgba(245, 245, 245, 1);
 $link-hover-color: rgba(114, 114, 114, 0.7);
 $body-background-color: rgba(0,0,0,1);
+$image-font-color: rgba(0,0,0,1);
 
 html {
     background: $body-background-color no-repeat center center fixed;
@@ -64,19 +65,22 @@ h4{
 
 .img-responsive {
   max-width: 100%;
+  height: auto;
+  display:block;
 }
 
 .image {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 435px;
   overflow: hidden;
   h3 {
     position: absolute;
     top:10px;
     left:25px;
     width:100%;
-    text-align:left
+    text-align:left;
+    color: $image-font-color;
   }
 }
 .fontSpacing {
@@ -99,5 +103,92 @@ h4{
     }
   }
 }
+.navicons {
+  list-style: none;
+  padding-top: 0px;
+  margin-bottom:0px;
+  text-align:right;
+  li {
+    display: inline-block;
+    padding-right: 0px;
+    padding-top: 5px;
+    a {
+      color: $secondary-text-color;
+      text-decoration: none;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
 
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  a {
+    color: $secondary-text-color;
+    text-decoration: none;
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: $font-stack;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+.centerizeIcons {
+  text-align: center;
+  letter-spacing: 10px;
+}
