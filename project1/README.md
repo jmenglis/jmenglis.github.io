@@ -21,6 +21,7 @@ equation will be provided and the variable x will be replaced by the number repr
 ### Technologies Used
 - HTML5
 - CSS
+- SASS
 - Javascript
 - Euclid’s Extended Algorithm in Javascript
 - Affine Cipher
