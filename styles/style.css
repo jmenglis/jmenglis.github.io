@@ -102,7 +102,7 @@ ul {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #primary-text-color; }
+  color: #333333; }
 
 .popup .close:hover {
   color: #06D85F; }
