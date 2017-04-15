@@ -15,9 +15,8 @@ window.onload = function () {
 
 $(function(){
     $(".element").typed({
-        strings: ["Web Developer.^2000", "Entrepreneur.^2000","Growth Hacker.^2000", "FinTech Guru.^2000"],
+        strings: ["Web Developer.^2000", "Builder.^2000","Growth Hacker.^2000", "FinTech Guru.^2000", "Maker.^2000"],
         typeSpeed: 25,
         loop: true
     });
 });
-
