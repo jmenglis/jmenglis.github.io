@@ -22,13 +22,16 @@ section {
 
 h1 {
   margin-bottom: 0px;
-  font-size: 40px; }
+  font-size: 40px;
+  letter-spacing: 2px; }
 
 h2 {
   margin-bottom: 0px; }
 
 ul {
   margin-top: 2px; }
+  ul li {
+    padding-bottom: 5px; }
 
 .typed-cursor {
   opacity: 1;
