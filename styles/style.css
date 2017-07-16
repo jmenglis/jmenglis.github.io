@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic);
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700");
 html, body, section, aside {
   height: 100%;
   margin: auto 0;
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  font-family: "Source Serif Pro", serif;
   color: #333333; }
 
 section {
@@ -95,7 +95,7 @@ ul {
 .popup h2 {
   margin-top: 0;
   color: #333333;
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
+  font-family: "Source Serif Pro", serif; }
 
 .popup .close {
   position: absolute;
