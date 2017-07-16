@@ -28,6 +28,11 @@
         <h2>Skills</h2>
           <ul>
             <li><strong>Languages: </strong><span v-for="(value, index) in skills.languages">{{ value }}<span v-if="!isLast(skills.languages, index)">, </span></span></li>
+            <li><strong>Web Development: </strong><span v-for="(value, index) in skills.webdev">{{ value }}<span v-if="!isLast(skills.webdev, index)">, </span></span></li>
+            <li><strong>Database: </strong><span v-for="(value, index) in skills.database">{{ value }}<span v-if="!isLast(skills.database, index)">, </span></span></li>
+            <li><strong>Testing: </strong><span v-for="(value, index) in skills.testing">{{ value }}<span v-if="!isLast(skills.testing, index)">, </span></span></li>
+            <li><strong>Other: </strong><span v-for="(value, index) in skills.other">{{ value }}<span v-if="!isLast(skills.other, index)">, </span></span></li>
+            <li><strong>Deployment: </strong><span v-for="(value, index) in skills.deployment">{{ value }}<span v-if="!isLast(skills.deployment, index)">, </span></span></li>
           </ul>
       </div>
     </aside>
