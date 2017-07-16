@@ -8,3 +8,5 @@ out
 gen
 .Ulysses-Group.plist
 # Created by .ignore support plugin (hsz.mobi)
+
+.sass-cache
