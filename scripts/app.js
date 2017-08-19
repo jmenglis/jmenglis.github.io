@@ -30,6 +30,10 @@ var app = new Vue({
       other: ['Git', 'VCS'],
       deployment: ['Docker', 'AWS', 'Linux', 'Azure', 'Ansible', 'Heroku'],
     }
+    projects: [{
+      title: 'desirelist',
+      
+    }]
   },
   mounted() {
     let typed = new Typed(this.$refs.typedElement, {
