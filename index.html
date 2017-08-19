@@ -35,6 +35,14 @@
             <li><strong>Deployment: </strong><span v-for="(value, index) in skills.deployment">{{ value }}<span v-if="!isLast(skills.deployment, index)">, </span></span></li>
           </ul>
         <h2>Projects</h2>
+        <ul v-for="(project, index) in projects">
+          <li>
+            <a @click.prevent="displayItem(project)">
+                {{project.title}}
+            </a>
+            <je-projects v-if="displayOverlay" v-bind:close-item="closeItem" v-bind:project='project'></je-projects>
+          </li>
+        </ul>
 
       </div>
     </aside>

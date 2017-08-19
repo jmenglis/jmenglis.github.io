@@ -1,6 +1,8 @@
+'use strict';
+
 window.onload = function() {
-  var currentdate = new Date();
-  var dateTime =
+  const currentdate = new Date();
+  const dateTime =
     'The date is currently: ' +
     (currentdate.getMonth() + 1) +
     '/' +
@@ -16,7 +18,28 @@ window.onload = function() {
   console.log(dateTime);
 };
 
-var app = new Vue({
+Vue.component('je-projects', {
+  props: ['project', 'closeItem'],
+  template: `<div class="overlay">
+      <div class="popup">
+        <h2>{{project.title}}</h2>
+        <a class="close" @click.prevent="closeItem">x</a>
+        <div class="content">
+          <strong>Summary: </strong> {{project.summary}}
+          <br>
+          <br>
+          <strong>Technologies Used: </strong> {{project.technologies}}
+          <br>
+          <br>
+          <strong>Project Status: </strong> {{ project.status }}
+          <br>
+          <br>
+          <strong v-if="project.problems">Unsolved Problems: </strong> {{ project.problems }}
+        </div>
+    </div>`,
+});
+
+let app = new Vue({
   el: '#app',
   data: {
     title: 'Josh English',
@@ -29,15 +52,17 @@ var app = new Vue({
       testing: ['Mocha', 'Chai', 'RSpec', 'Jest'],
       other: ['Git', 'VCS'],
       deployment: ['Docker', 'AWS', 'Linux', 'Azure', 'Ansible', 'Heroku'],
-    }
+    },
     projects: [{
       title: 'desirelist 1.0',
       description: 'Taking the guesswork out of gifting',
-      summary: 'Worked with a small team to implement features and changes to the site.'
+      summary: 'Worked with a small team to implement features and changes to the site.',
       technologies: 'Jade, Javascript, HTML5, SASS, RivetsJS, Nodejs, Express, Mongodb, Grunt, Ansible',
       projectLink: 'http://legacy.desirelist.com',
       status: 'Deprecated',
-    }]
+    }],
+    displayOverlay: false,
+    project: {},
   },
   mounted() {
     let typed = new Typed(this.$refs.typedElement, {
@@ -59,6 +84,15 @@ var app = new Vue({
       } else {
         return false;
       }
+    },
+    displayItem(project) {
+      this.displayOverlay = true;
+      this.project = project;
+      console.log(this.displayOverlay, this.project);
+    },
+    closeItem() {
+      this.displayOverlay = false;
+      this.project = {};
     },
   }
 });
