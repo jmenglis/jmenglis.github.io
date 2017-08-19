@@ -31,8 +31,12 @@ var app = new Vue({
       deployment: ['Docker', 'AWS', 'Linux', 'Azure', 'Ansible', 'Heroku'],
     }
     projects: [{
-      title: 'desirelist',
-      
+      title: 'desirelist 1.0',
+      description: 'Taking the guesswork out of gifting',
+      summary: 'Worked with a small team to implement features and changes to the site.'
+      technologies: 'Jade, Javascript, HTML5, SASS, RivetsJS, Nodejs, Express, Mongodb, Grunt, Ansible',
+      projectLink: 'http://legacy.desirelist.com',
+      status: 'Deprecated',
     }]
   },
   mounted() {
