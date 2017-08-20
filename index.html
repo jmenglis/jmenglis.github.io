@@ -1,69 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>I am Josh English</title>
   <meta charset="utf-8">
-  <meta name="description" content="Coffee addicted web developer who likes to build things from a raw canvas. Driven, talented and motivated to always deliver the best results.">
-  <meta name="keywords" content="web,developer,layout,design,logo,framework,elements,advisor,app,builder">
-  <meta name="author" content="Josh English">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="styles/style.css" type="text/css" rel="stylesheet" />
-  <link href="styles/font-awesome.css" type="text/css" rel="stylesheet" />
-  <link href="styles/animate.css" type="text/css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-  <script src="scripts/typed.min.js"></script>
+  <title>I am Josh English</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-  <section id="app">
-    <aside class="left-half animated fadeInLeft"></aside>
-    <aside class="right-half animated fadeInRight">
-      <div class="myText">
-        <h1>{{ title }}</h1>
-        <span class="element" style="font-size: 18px; color: red;" ref="typedElement"></span>
-        <p> {{ description }} </p>
-        <h2>Skills</h2>
-          <ul>
-            <li><strong>Languages: </strong><span v-for="(value, index) in skills.languages">{{ value }}<span v-if="!isLast(skills.languages, index)">, </span></span></li>
-            <li><strong>Web Development: </strong><span v-for="(value, index) in skills.webdev">{{ value }}<span v-if="!isLast(skills.webdev, index)">, </span></span></li>
-            <li><strong>Database: </strong><span v-for="(value, index) in skills.database">{{ value }}<span v-if="!isLast(skills.database, index)">, </span></span></li>
-            <li><strong>Testing: </strong><span v-for="(value, index) in skills.testing">{{ value }}<span v-if="!isLast(skills.testing, index)">, </span></span></li>
-            <li><strong>Other: </strong><span v-for="(value, index) in skills.other">{{ value }}<span v-if="!isLast(skills.other, index)">, </span></span></li>
-            <li><strong>Deployment: </strong><span v-for="(value, index) in skills.deployment">{{ value }}<span v-if="!isLast(skills.deployment, index)">, </span></span></li>
-          </ul>
-        <h2>Projects</h2>
-        <ul v-for="(project, index) in projects">
-          <li>
-            <a @click.prevent="displayItem(project)">
-                {{project.title}}
-            </a>
-            <je-projects v-if="displayOverlay" v-bind:close-item="closeItem" v-bind:project='project'></je-projects>
-          </li>
-        </ul>
-
-      </div>
-    </aside>
-  </section>
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-5317622-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-  <script src="scripts/app.js"></script>
+  <div id="app" class="aligner">
+    <div class="aligner-item">
+      <svg width="100%" height="100%" viewBox="-65 100 250 10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+       <path id="path">
+      		<animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="0" fill="freeze"/>
+      	</path>
+      	<text font-size="26" font-family="Crimson Text" fill='hsla(255, 255, 255, 1)'>
+      		<textPath xlink:href="#path">
+            Josh English
+          </textPath>
+      	</text>
+      </svg>
+      <!-- <p id="title" class="unblur">Example title</p> -->
+    </div>
+  </div>
 </body>
 
 </html>
