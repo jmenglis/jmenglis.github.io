@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/joshenglish
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.joshenglish.com
+  * I am joshenglish (https://keybase.io/joshenglish) on keybase.
+  * I have a public key ASDH8rSZOkATwYEUotppJ-SUpzU2qzBVnhkSLIdsW6PGmgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c7f2b4993a4013c18114a2da6927e494a73536ab30559e19122c876c5ba3c69a0a",
+      "host": "keybase.io",
+      "kid": "0120c7f2b4993a4013c18114a2da6927e494a73536ab30559e19122c876c5ba3c69a0a",
+      "uid": "5f54859ccfb1d56a0f61f55648c8a819",
+      "username": "joshenglish"
+    },
+    "merkle_root": {
+      "ctime": 1509222088,
+      "hash": "64ba98d96ca89edb04bddc0390de7f8048dec4d53034919257a7d7793e21758f4b781ea125a60f3d17f3d67ba7792077c2c861eabe8535e6707fd8442d786ad9",
+      "hash_meta": "e95cc275733d7086e0d76f7ae93e28407d72313d4cd9d272d9aeedd0fd02d906",
+      "seqno": 1641731
+    },
+    "service": {
+      "hostname": "www.joshenglish.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.34"
+  },
+  "ctime": 1509222099,
+  "expire_in": 504576000,
+  "prev": "6cf7a7d7919f30a8a4b93dabe1d57053bd31a84905b6ea90a3bceaaa1dd07ad9",
+  "seqno": 21,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgx/K0mTpAE8GBFKLaaSfklKc1NqswVZ4ZEiyHbFujxpoKp3BheWxvYWTFA097ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzdmMmI0OTkzYTQwMTNjMTgxMTRhMmRhNjkyN2U0OTRhNzM1MzZhYjMwNTU5ZTE5MTIyYzg3NmM1YmEzYzY5YTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzdmMmI0OTkzYTQwMTNjMTgxMTRhMmRhNjkyN2U0OTRhNzM1MzZhYjMwNTU5ZTE5MTIyYzg3NmM1YmEzYzY5YTBhIiwidWlkIjoiNWY1NDg1OWNjZmIxZDU2YTBmNjFmNTU2NDhjOGE4MTkiLCJ1c2VybmFtZSI6Impvc2hlbmdsaXNoIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA5MjIyMDg4LCJoYXNoIjoiNjRiYTk4ZDk2Y2E4OWVkYjA0YmRkYzAzOTBkZTdmODA0OGRlYzRkNTMwMzQ5MTkyNTdhN2Q3NzkzZTIxNzU4ZjRiNzgxZWExMjVhNjBmM2QxN2YzZDY3YmE3NzkyMDc3YzJjODYxZWFiZTg1MzVlNjcwN2ZkODQ0MmQ3ODZhZDkiLCJoYXNoX21ldGEiOiJlOTVjYzI3NTczM2Q3MDg2ZTBkNzZmN2FlOTNlMjg0MDdkNzIzMTNkNGNkOWQyNzJkOWFlZWRkMGZkMDJkOTA2Iiwic2Vxbm8iOjE2NDE3MzF9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoid3d3Lmpvc2hlbmdsaXNoLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM0In0sImN0aW1lIjoxNTA5MjIyMDk5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjZjZjdhN2Q3OTE5ZjMwYThhNGI5M2RhYmUxZDU3MDUzYmQzMWE4NDkwNWI2ZWE5MGEzYmNlYWFhMWRkMDdhZDkiLCJzZXFubyI6MjEsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAcPSjVWoJTS7boDeb7fHJeeKu53gCANv4qQ0c8U1K3z20jI3tAlS5VKYTjsUmj7OSsm0JGexHqtnSz9qUIVXJD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAl93rxpjTbXy/08b7CCBGiQJkEQZSjNv+YzsZ44mFs0o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joshenglish
+
+==================================================================
