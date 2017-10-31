@@ -26,4 +26,11 @@
 a {
   color: black; }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .add-height {
+    height: auto; }
+
+  .aligner-item {
+    height: 30vh; } }
+
 /*# sourceMappingURL=style.css.map */
