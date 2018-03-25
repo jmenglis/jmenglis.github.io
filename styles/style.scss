@@ -6,8 +6,12 @@
 }
 
 .aligner-item {
-  height: 10vh;
   width: 100%;
+  text-align: center;
+}
+.svg-box {
+  height: 100px;
+  width: 600px;
 }
 .footer-icons {
   height: 8vh;
@@ -39,3 +43,10 @@ a {
     height: 30vh;
   }
 }
+@media only screen  and (max-width : 1224px) {
+  .svg-box {
+    height: 100px;
+    width: 360px;
+  }
+}
+  
