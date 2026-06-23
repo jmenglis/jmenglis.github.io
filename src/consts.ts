@@ -4,7 +4,7 @@ export const SITE = {
   title: 'Josh English',
   tagline: 'Software engineer',
   description:
-    'Josh English — full-stack software engineer at AWS. Writing about software, finance, and whatever else is on my mind.',
+    'Josh English, full-stack software engineer at AWS. Writing about software, finance, and whatever else is on my mind.',
   author: 'Josh English',
   url: 'https://www.joshenglish.com',
   // Universal Analytics (UA-5317622-1) was retired in 2023. Re-add GA4 or a
