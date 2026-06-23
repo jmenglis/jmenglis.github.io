@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="About Josh English — full-stack software engineer at AWS."
+>
+  <div class="wrapper prose about">
+    <p class="eyebrow">~ cat about.md</p>
+    <h1>About</h1>
+
+    <p>
+      Josh is a full-stack software engineer with a passion for building products
+      that enable significant impact for end-users. His passions include finance,
+      working on motorcycles, pretending to play golf, and collecting wine.
+    </p>
+    <p>
+      Josh's career did not start out in software engineering, but he always had a
+      knack for tinkering with things. His entry into software engineering began by
+      way of a bootcamp called
+      <a href="https://generalassemb.ly/" rel="noopener" target="_blank">General Assembly</a>.
+      He has done software engineering stints at The Desire Company (fka
+      desirelist), Fitch Solutions, and is currently at Amazon Web Services. In the
+      spirit of working backwards, Josh has been working on his Master's in Computer
+      Science at Georgia Tech (OMSCS).
+    </p>
+    <p>
+      Spaces that are interesting to Josh include blockchain, web3, fintech, and
+      social impact.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    padding-top: var(--space-xs);
+  }
+  .about h1 {
+    margin: var(--space-2xs) 0 var(--space-m);
+  }
+</style>
