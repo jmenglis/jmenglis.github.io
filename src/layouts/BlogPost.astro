@@ -1,0 +1,127 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, subtitle, date, tags, author, draft, description, ogImage } =
+  post.data;
+---
+
+<BaseLayout title={title} description={description} ogImage={ogImage} article>
+  <article class="wrapper post">
+    {
+      draft && (
+        <p class="draft-banner">
+          ⚠ This is a draft — published content may change.
+        </p>
+      )
+    }
+
+    <header class="post-header">
+      <a href="/blog/" class="back-link">← All posts</a>
+      <h1>{title}</h1>
+      {subtitle && <p class="subtitle">{subtitle}</p>}
+      <p class="post-meta">
+        <FormattedDate date={date} />
+        {author && <span> · {author}</span>}
+      </p>
+      {
+        tags.length > 0 && (
+          <ul class="tags">
+            {tags.map((tag) => (
+              <li class="tag">#{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post {
+    padding-top: var(--space-xs);
+  }
+  .back-link {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+  .back-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .post-header {
+    margin-bottom: var(--space-l);
+  }
+  .post-header h1 {
+    margin-top: var(--space-s);
+    margin-bottom: var(--space-2xs);
+  }
+  .subtitle {
+    font-size: var(--step-1);
+    color: var(--text-muted);
+    margin: 0 0 var(--space-xs);
+  }
+  .post-meta {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+    padding: 0;
+    margin: var(--space-s) 0 0;
+  }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    color: var(--accent);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.1rem 0.55rem;
+  }
+  .draft-banner {
+    background: color-mix(in srgb, var(--accent) 14%, var(--bg));
+    border: 1px solid var(--accent);
+    color: var(--text);
+    border-radius: var(--radius);
+    padding: var(--space-s);
+    margin-bottom: var(--space-m);
+    font-size: var(--step--1);
+  }
+
+  /* Prose rhythm for MDX content */
+  .prose :global(h2) {
+    margin-top: var(--space-l);
+  }
+  .prose :global(h3) {
+    margin-top: var(--space-m);
+  }
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 0 0 var(--space-s);
+    padding-left: 1.4rem;
+  }
+  .prose :global(li) {
+    margin-bottom: 0.3rem;
+  }
+  .prose :global(img) {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+</style>

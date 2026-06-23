@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostListItem from '../../components/PostListItem.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout
+  title="Blog"
+  description="Posts on software, finance, and whatever else is on my mind."
+>
+  <div class="wrapper">
+    <header class="page-head">
+      <p class="eyebrow">~/blog $ ls -t</p>
+      <h1>Blog</h1>
+      <p class="lede">
+        Rantings, rumblings, and the occasional useful thing — categorized by tag.
+      </p>
+    </header>
+
+    <div class="post-list">
+      {posts.map((post) => <PostListItem post={post} />)}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-bottom: var(--space-l);
+  }
+  .page-head h1 {
+    margin: var(--space-2xs) 0;
+  }
+  .lede {
+    color: var(--text-muted);
+    margin: 0;
+  }
+</style>
