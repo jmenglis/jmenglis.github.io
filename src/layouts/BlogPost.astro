@@ -12,7 +12,14 @@ const { title, subtitle, date, tags, author, draft, description, ogImage } =
   post.data;
 ---
 
-<BaseLayout title={title} description={description} ogImage={ogImage} article>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  article
+  publishedDate={date}
+  tags={tags}
+>
   <article class="wrapper post">
     {
       draft && (

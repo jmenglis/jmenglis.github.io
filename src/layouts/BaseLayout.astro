@@ -12,9 +12,12 @@ interface Props {
   description?: string;
   ogImage?: string;
   article?: boolean;
+  publishedDate?: Date;
+  tags?: string[];
 }
 
-const { title, description, ogImage, article } = Astro.props;
+const { title, description, ogImage, article, publishedDate, tags } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -25,6 +28,8 @@ const { title, description, ogImage, article } = Astro.props;
       description={description}
       ogImage={ogImage}
       article={article}
+      publishedDate={publishedDate}
+      tags={tags}
     />
     <ClientRouter />
   </head>

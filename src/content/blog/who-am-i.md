@@ -1,6 +1,7 @@
 ---
 title: "Who am I?"
 date: 2024-09-26
+description: "A quick introduction — who Josh English is and isn't: a full-stack engineer at AWS, OMSCS student, motorcycle rider, and problem solver, and what to expect from this blog."
 tags: [self]
 ---
 

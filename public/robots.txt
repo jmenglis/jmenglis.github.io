@@ -1,0 +1,9 @@
+# https://www.joshenglish.com
+User-agent: *
+Allow: /
+
+# Legacy CRA demo deployed under /cointracker — keep it out of the index
+# so it doesn't compete as thin/duplicate content.
+Disallow: /cointracker/
+
+Sitemap: https://www.joshenglish.com/sitemap-index.xml
