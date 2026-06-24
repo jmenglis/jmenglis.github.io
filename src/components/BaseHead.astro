@@ -22,7 +22,7 @@ const {
 const pageTitle = title ? `${title} · ${SITE.title}` : `${SITE.title} · ${SITE.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = new URL(ogImage, Astro.site);
-const ogImageAlt = title ? `${title} — ${SITE.title}` : `${SITE.title}, ${SITE.tagline}`;
+const ogImageAlt = title ? `${title}: ${SITE.title}` : `${SITE.title}, ${SITE.tagline}`;
 const isHome = Astro.url.pathname === '/';
 
 // Social profiles strengthen the Person entity (knowledge-graph sameAs).
