@@ -13,7 +13,7 @@ interface Props {
 const {
   title,
   description = SITE.description,
-  ogImage = '/favicon.png',
+  ogImage = '/og-default.png',
   article = false,
   publishedDate,
   tags = [],
@@ -96,7 +96,11 @@ if (article && publishedDate) {
 <meta name="title" content={pageTitle} />
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
-<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/png" href="/favicon.png" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1117" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
   rel="alternate"
@@ -111,6 +115,8 @@ if (article && publishedDate) {
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={ogImageAlt} />
 <meta property="og:site_name" content={SITE.title} />
 <meta property="og:locale" content="en_US" />
