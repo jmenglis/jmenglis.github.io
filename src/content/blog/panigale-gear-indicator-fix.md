@@ -1,5 +1,5 @@
 ---
-title: "My 2025 Panigale V4S showed a dash where the N should be"
+title: "When my Panigale V4S lost its N"
 description: "My 2025 Ducati Panigale V4S started showing a dash instead of an N for neutral, which killed the quick shifter too. Here is what went wrong and how Ducati fixed it."
 date: 2026-06-23
 tags: ["motorcycles", "ducati", "panigale"]
