@@ -7,6 +7,9 @@ export const SITE = {
     'Josh English, full-stack software engineer at AWS. Writing about software, finance, and whatever else is on my mind.',
   author: 'Josh English',
   url: 'https://www.joshenglish.com',
+  // Author headshot in public/. Rendered in the hero, About page, and the
+  // Person schema only when the file is present (see utils/authorPhoto.ts).
+  authorPhoto: '/josh-english.jpg',
   // Universal Analytics (UA-5317622-1) was retired in 2023. Re-add GA4 or a
   // privacy-friendly analytics snippet here if desired.
   // analyticsId: '',
