@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTags, tagPath } from '../../../utils/tags';
+
+const tags = [...(await getTags()).values()]
+  .map(({ slug, tag, posts }) => ({ slug, tag, count: posts.length }))
+  .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+---
+
+<BaseLayout
+  title="Tags"
+  description="Browse posts by topic — every tag on Josh English's blog."
+>
+  <div class="wrapper">
+    <header class="page-head">
+      <p class="eyebrow">~/blog $ ls tags/</p>
+      <h1>Tags</h1>
+      <p class="lede">Browse posts by topic.</p>
+    </header>
+
+    {
+      tags.length === 0 ? (
+        <p class="lede">No tags yet.</p>
+      ) : (
+        <ul class="tag-cloud">
+          {tags.map((t) => (
+            <li>
+              <a class="tag" href={tagPath(t.tag)}>
+                #{t.tag}
+                <span class="count">{t.count}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-bottom: var(--space-l);
+  }
+  .page-head h1 {
+    margin: var(--space-2xs) 0;
+  }
+  .lede {
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .tag-cloud {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+    padding: 0;
+    margin: 0;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    color: var(--accent);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.2rem 0.6rem;
+    transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  .tag:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+  .count {
+    color: var(--text-muted);
+    font-size: 0.78em;
+  }
+</style>

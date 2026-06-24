@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostListItem from '../../../components/PostListItem.astro';
+import { getTags } from '../../../utils/tags';
+
+export async function getStaticPaths() {
+  const tags = await getTags();
+  return [...tags.values()].map(({ slug, tag, posts }) => ({
+    params: { tag: slug },
+    props: { tag, posts },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+const count = posts.length;
+---
+
+<BaseLayout
+  title={`#${tag}`}
+  description={`${count} post${count === 1 ? '' : 's'} tagged “${tag}” by Josh English.`}
+>
+  <div class="wrapper">
+    <header class="page-head">
+      <p class="eyebrow">~/blog $ grep -l '#{tag}' *</p>
+      <h1>#{tag}</h1>
+      <p class="lede">
+        {count} post{count === 1 ? '' : 's'} tagged <strong>{tag}</strong>.
+        <a href="/blog/tags/">All tags →</a>
+      </p>
+    </header>
+
+    <div class="post-list">
+      {posts.map((post) => <PostListItem post={post} />)}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-bottom: var(--space-l);
+  }
+  .page-head h1 {
+    margin: var(--space-2xs) 0;
+  }
+  .lede {
+    color: var(--text-muted);
+    margin: 0;
+  }
+</style>
