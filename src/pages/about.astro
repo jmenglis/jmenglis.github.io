@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+import { authorPhotoExists } from '../utils/authorPhoto';
 ---
 
 <BaseLayout
@@ -9,6 +11,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div class="wrapper prose about">
     <p class="eyebrow">~ cat about.md</p>
     <h1>About</h1>
+
+    {
+      authorPhotoExists && (
+        <img
+          class="about-photo"
+          src={SITE.authorPhoto}
+          width="160"
+          height="160"
+          alt="Josh English"
+          loading="eager"
+          decoding="async"
+        />
+      )
+    }
 
     <p>
       Josh is a full-stack software engineer at AWS. He didn't start out writing
@@ -36,5 +52,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .about h1 {
     margin: var(--space-2xs) 0 var(--space-m);
+  }
+  .about-photo {
+    float: right;
+    width: 160px;
+    height: 160px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    border: 2px solid var(--border);
+    margin: 0 0 var(--space-s) var(--space-m);
+  }
+  @media (max-width: 30rem) {
+    .about-photo {
+      float: none;
+      margin: 0 0 var(--space-s);
+    }
   }
 </style>

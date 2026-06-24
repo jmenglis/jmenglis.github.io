@@ -3,7 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostListItem from '../components/PostListItem.astro';
 import Icon from '../components/Icon.astro';
-import { SOCIAL_LINKS } from '../consts';
+import { SOCIAL_LINKS, SITE } from '../consts';
+import { authorPhotoExists } from '../utils/authorPhoto';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -13,6 +14,19 @@ const recent = posts.slice(0, 5);
 
 <BaseLayout>
   <section class="wrapper hero">
+    {
+      authorPhotoExists && (
+        <img
+          class="hero-photo"
+          src={SITE.authorPhoto}
+          width="120"
+          height="120"
+          alt="Josh English"
+          loading="eager"
+          decoding="async"
+        />
+      )
+    }
     <p class="eyebrow">~ whoami</p>
     <h1 class="hero-title">
       Josh English
@@ -62,6 +76,15 @@ const recent = posts.slice(0, 5);
 <style>
   .hero {
     padding-block: var(--space-l) var(--space-xl);
+  }
+  .hero-photo {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+    margin-bottom: var(--space-s);
   }
   .hero-title {
     margin: var(--space-2xs) 0 0;
