@@ -23,8 +23,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        # withastro/action handles Node setup, dependency install (npm),
-        # `astro build`, and uploads the Pages artifact (with .nojekyll).
+        # withastro/action auto-detects the package manager from the lockfile
+        # (bun.lock -> bun), installs deps, runs `astro build`, and uploads the
+        # Pages artifact (with .nojekyll).
 
   deploy:
     needs: build
