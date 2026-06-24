@@ -71,6 +71,27 @@ if (article && publishedDate) {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00TGHBNECJ"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-00TGHBNECJ');
+
+  // View transitions swap the document without a full reload, so send a
+  // page_view manually on each client-side navigation.
+  document.addEventListener('astro:after-swap', () => {
+    gtag('event', 'page_view', {
+      page_path: location.pathname + location.search,
+      page_location: location.href,
+      page_title: document.title,
+    });
+  });
+</script>
+
 <title>{pageTitle}</title>
 <meta name="title" content={pageTitle} />
 <meta name="description" content={description} />
