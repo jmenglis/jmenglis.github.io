@@ -1,0 +1,5 @@
+[install]
+# Dependency cooldown: only install npm versions published at least 3 days ago.
+# Gives the community time to flag a malicious or broken release before it
+# lands here. Value is in seconds (3 days = 259200).
+minimumReleaseAge = 259200
